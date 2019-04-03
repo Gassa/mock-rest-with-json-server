@@ -1,0 +1,21 @@
+# Docker environment with Json Server
+
+## Build image
+```
+docker build  -t gassa/json-server  .
+```
+
+## Run 
+```
+docker run  \
+      -p 3000:3000  -v `pwd`:/data  \
+      williamyeh/json-server        \
+      --watch db.json
+```
+
+```
+docker run  \
+      -p 3000:3000  -v `pwd`/data:/data  \
+      gassa/json-server        \
+      --watch db.json
+```
